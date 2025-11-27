@@ -10,8 +10,8 @@ jobs:
           - uses: oven-sh/setup-bun@v2
             with:
                 bun-version: latest
-            run: bun install
-            run: |
+          - run: bun install
+          - run: |
                 bun run random-number-generator.js
                 bun run random-number-generator.js "test-seed"
                 bun run random-number-generator.js 1906
@@ -26,4 +26,5 @@ jobs:
     test-linux:
         name: Test Linux Executable
         needs: build
+
         runs-on: Ubuntu-latest
