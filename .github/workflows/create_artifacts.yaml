@@ -19,12 +19,5 @@ jobs:
             with:
                 name: test-report
                 path: report.txt
-    build:
-        name: Build Executables
-        runs-on: Ubuntu-latest
-        needs: test
-    test-linux:
-        name: Test Linux Executable
-        needs: build
 
-        runs-on: Ubuntu-latest
+
